@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+  }
+  
+  div {
+    position: relative;
+    z-index: 2;
+  }
+  
+  body {
+    background-color: #000;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    background-color: #19b670;
+  }
+  .footer {
+    width: 450px;
+    text-align: center;
+    display: block;
+    margin: 15px auto 30px auto;
+    font-size: 0.8em;
+    color: #fff;
+    a {
+      font-weight: 500;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  #quote-box {
+    border-radius: 3px;
+    position: relative;
+    margin:auto auto auto auto;
+    width: 550px;
+    padding: 60px 30px;
+    display: flex;
+    background-color: #fff;
+    .quote-text {
+      i {
+        font-size: 1em;
+        margin-right: 0.3em;
+      }
+      text-align: center;
+      width: 600px;
+      height: auto;
+      clear: both;
+      font-weight: 500;
+      font-size: 1.75em;
+      padding: 20px;
+    }
+    .quote-author {
+      height: auto;
+      clear: both;
+      padding-top: 120px;
+      padding-right: 10px;
+      font-size: 1.1em;
+      font-weight: 300;
+      font-style: italic;
+      text-align: center;
+      display: block;
+    }
+    #author {
+      font-size: 1.3em;
+      font-style: normal;
+    }
+    .buttons {
+      width: 200px;
+      margin: 10px;
+      display: block;
+      text-align: right;
+      .button {
+        height: 38px;
+        width: 75px;
+        border: none;
+        border-radius: 3px;
+        color: black;
+        background-color: #1ccd7d;
+        border: black solid 2px;
+        font-size: 0.85em;
+        margin: 10px;
+        opacity: 1;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.9;
+        }
+        &#tweet-quote {
+          float: left;
+          padding: 10px;
+          text-align: center;
+          font-size: 1.2em;
+          height: 30px;
+          width: 40px;
+        }
+        &#new-quote {
+          float: right;
+        }
+      }
+    }
+  }
+  

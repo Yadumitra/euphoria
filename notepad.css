@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+
+$color-1st: #f25287;
+$color-2nd: #f9f3f3;
+$color-3rd: #5b5b5b;
+$color-4th: #dddddd;
+$title-font: Lobster;
+$body-font: Roboto;
+
+@mixin content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#app {
+  @include content-center;
+  min-height: 100vh;
+  background-color: $color-2nd;
+}
+
+.notepad {
+  @include content-center;
+  padding: 17px;
+  min-width: 70%;
+  min-height: 250px;
+  overflow: hidden;
+  position: relative;
+  border: 0px solid black;
+  color: $color-1st;
+  font-family: $body-font;
+
+  .menu {
+    @include hidden;
+    @include flex-column;
+
+    h1 {
+      margin: 0px;
+      margin-bottom: 20px;
+      font-size: 60px;
+      font-family: $title-font;
+    }
+
+    button {
+      @extend .btn;
+      font-size: 20px;
+      margin: {
+        top: 10px;
+        left: 20px;
+        right: 20px;
+      }
+    }
+  }
+
+  .file {
+    @include hidden;
+    @include flex-column;
+    flex: 1 1 auto;
+    font-size: 17px;
+
+    a,
+    a:focus,
+    a:active {
+      color: $color-1st;
+    }
+
+    .list {
+      margin: 10px 0px;
+      border-radius: 5px;
+      border: 1px solid $color-4th;
+      overflow: hidden;
+    }
+
+    ul {
+      height: 200px;
+      margin: 0px;
+      padding: 10px 20px;
+      list-style: none;
+      overflow-y: scroll;
+      font-size: 20px;
+    }
+
+    button {
+      @extend .btn;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  }
+
+  .editor {
+    @include hidden;
+    @include flex-column;
+    flex: 1 1 auto;
+
+    input {
+      font-size: 17px;
+    }
+
+    textarea {
+      height: 150px;
+      font-size: 15px;
+    }
+
+    input,
+    textarea {
+      border: 2px solid $color-4th;
+      border-radius: 5px;
+      padding: 10px 7px;
+      margin-bottom: 7px;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: $color-1st;
+    }
+
+    button {
+      @extend .btn;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.btn {
+  color: #484848;
+  padding: 5px 12px;
+  cursor: pointer;
+  border: 2px solid $color-4th;
+  border-radius: 7px;
+  transition: all 0.2s;
+  background-color: transparent;
+}
+
+.btn:hover {
+  color: $color-2nd;
+  border-color: $color-1st;
+  background-color: $color-1st;
+}
+
+.show {
+  animation-name: show;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.hide {
+  animation-name: hide;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    left: -350px;
+    position: relative;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+    position: relative;
+    visibility: visible;
+  }
+}
+
+@keyframes hide {
+  0% {
+    left: 0px;
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    left: 350px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* helpers */
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
