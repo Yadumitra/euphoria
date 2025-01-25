@@ -43,7 +43,7 @@ button:disabled {
 
 .controls-block > button {
 	background-color: transparent;
-	color: white;
+	color: rgb(10, 3, 3);
 	font-size: 1.5em;
 	min-width: 32px;
 	vertical-align: bottom;
@@ -54,7 +54,7 @@ button:disabled {
 	margin-left: auto;
 	margin-right: auto;
 	border: 2px solid;
-	border-color: rgb(154, 202, 39);
+	border-color: rgb(77, 86, 141);
 	border-radius: 50%;
 	width: 300px;
 	height: 300px;
@@ -80,7 +80,7 @@ button:disabled {
 #clock-container > button {
 	border: none;
 	background-color: transparent;
-	color: white;
+	color: rgb(237, 142, 142);
 	font-size: 1em;
 	min-width: 95px;
 }
@@ -93,7 +93,7 @@ button:disabled {
 #outer {
     width: 300px;
     height: 300px;
-    border: 2px solid #ccc;
+    border: 2px solid #de0a0a;
     overflow: hidden;
     
     position: relative;
