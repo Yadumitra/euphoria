@@ -1,0 +1,120 @@
+body {
+	background-color: #ffe4e1;
+	color: rgb(30, 29, 26);
+	font-family: Helvetica Neue, Arial, sans;
+	font-weight: 200;
+	text-align: center;
+}
+
+h1 {
+	font-weight: 200;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: rgb(161, 5, 5);
+	font-size: 1.3em;
+}
+
+button:disabled {
+	color: rgba(128,128,128,32);
+}
+
+.controls-block {
+	display: inline-block;
+	margin: 0 10px 0 10px;
+}
+
+/*.controls-block > * {
+	border: 1px dotted orange;
+}*/
+
+.controls-label {
+	font-size: .8em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.control-value {
+	font-size: 2em;
+}
+
+.controls-block > button {
+	background-color: transparent;
+	color: rgb(10, 3, 3);
+	font-size: 1.5em;
+	min-width: 32px;
+	vertical-align: bottom;
+}
+
+#clock-container {
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid;
+	border-color: rgb(77, 86, 141);
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	display: table;
+	overflow: hidden;
+	position: relative;
+}
+
+#clock-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#clock-counter {
+	font-size: 5em;
+	text-align: center;
+	margin: auto;
+	-webkit-font-feature-settings: 'tnum';
+	-moz-font-feature-settings: 'tnum';
+	-ms-font-feature-settings: 'tnum';
+}
+
+#clock-container > button {
+	border: none;
+	background-color: transparent;
+	color: rgb(237, 142, 142);
+	font-size: 1em;
+	min-width: 95px;
+}
+
+#clock-label {
+	margin-top: -20px;
+	font-size: 2em;
+}
+
+#outer {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #de0a0a;
+    overflow: hidden;
+    
+    position: relative;
+    
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#inner, #inner div {
+    z-index: -1;
+    width: 100%;
+    overflow: hidden;
+    left: -1px;
+    position: absolute;
+}
+
+#inner {
+    border-top-width: 0;
+    background-color: rgb(154, 202, 39);
+
+    bottom: 0;
+    height: 0%;
+}
