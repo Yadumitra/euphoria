@@ -1,224 +1,249 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+/* My Starter Template */
 
-$color-1st: #f25287;
-$color-2nd: #f9f3f3;
-$color-3rd: #5b5b5b;
-$color-4th: #dddddd;
-$title-font: Lobster;
-$body-font: Roboto;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-@mixin content-center {
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+  background: rgba(175, 238, 238, 0.3);
+  color: lightcoral;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+}
+
+/* Global Typography */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+form,
+textarea {
+  font-size: 1rem;
+}
+
+button {
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: aquamarine;
+  color: #0a2472;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Section Container Positions, Spacing, Utilities */
+
+header {
+  text-align: center;
+  margin: 1em auto;
+}
+
+.section {
+  padding: 1em 1em;
+  width: 100%;
+  margin: 1em auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 1em;
+}
+
+.container-row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Button Standard */
+
+.btn-main,
+.btn-light,
+.btn-dark {
+  display: block;
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  transition: all 0.1s;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-main {
+  color: lightgoldenrodyellow;
+  background-color: lightcoral;
+}
+
+.btn-light {
+  color: #0a2472;
+  background-color: white;
+}
+
+.btn-dark {
+  color: white;
+  background-color: #0a2472;
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: lightgoldenrodyellow;
+  color: lightcoral;
+  font-weight: 700;
+  transform: scale(1.08);
+}
+
+/* Project Starts Here */
+
+/* Journal Entry Section */
+
+/* Title */
+
+.entry-text-title {
+  width: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 2px;
+  border: unset;
+  background-color: lightgoldenrodyellow;
+  font-family: 'Space Mono', monospace;
+}
+
+.entry-text-title:focus {
+  outline-color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  color: lightcoral;
+  font-size: 1rem;
+}
+
+.entry-text-title::placeholder {
+  color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.entry-text-title::-ms-value {
+  color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+/* Text Box */
+
+.container-row-journal {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-@mixin flex-column {
+.entry-form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.journal-label {
+  display: block;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.entry-text-box {
+  width: 100%;
+  height: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 2px;
+  border: unset;
+  background-color: lightgoldenrodyellow;
+  font-family: 'Space Mono', monospace;
+}
+
+@media (min-width: 769px) {
+  .entry-text-box {
+    width: 40em;
+    height: 20em;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 2px;
+    border: unset;
+    background-color: lightgoldenrodyellow;
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+.entry-text-box:focus {
+  outline-color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  color: lightcoral;
+  font-size: 1rem;
+}
+
+.entry-text-box::placeholder {
+  color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.entry-submit-btn {
+  margin: 0;
+}
+
+/* Journal Results Section */
+
+.sectionEntryResults {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.entryResultRow {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin: 1em auto; */
   display: flex;
-  flex-direction: column;
-}
-
-@mixin hidden {
-  position: absolute;
-  visibility: hidden;
-}
-
-html,
-body {
-  margin: 0px;
-  padding: 0px;
-}
-
-#app {
-  @include content-center;
-  min-height: 100vh;
-  background-color: $color-2nd;
-}
-
-.notepad {
-  @include content-center;
-  padding: 17px;
-  min-width: 70%;
-  min-height: 250px;
-  overflow: hidden;
-  position: relative;
-  border: 0px solid black;
-  color: $color-1st;
-  font-family: $body-font;
-
-  .menu {
-    @include hidden;
-    @include flex-column;
-
-    h1 {
-      margin: 0px;
-      margin-bottom: 20px;
-      font-size: 60px;
-      font-family: $title-font;
-    }
-
-    button {
-      @extend .btn;
-      font-size: 20px;
-      margin: {
-        top: 10px;
-        left: 20px;
-        right: 20px;
-      }
-    }
-  }
-
-  .file {
-    @include hidden;
-    @include flex-column;
-    flex: 1 1 auto;
-    font-size: 17px;
-
-    a,
-    a:focus,
-    a:active {
-      color: $color-1st;
-    }
-
-    .list {
-      margin: 10px 0px;
-      border-radius: 5px;
-      border: 1px solid $color-4th;
-      overflow: hidden;
-    }
-
-    ul {
-      height: 200px;
-      margin: 0px;
-      padding: 10px 20px;
-      list-style: none;
-      overflow-y: scroll;
-      font-size: 20px;
-    }
-
-    button {
-      @extend .btn;
-      font-size: 15px;
-      margin-top: 10px;
-    }
-  }
-
-  .editor {
-    @include hidden;
-    @include flex-column;
-    flex: 1 1 auto;
-
-    input {
-      font-size: 17px;
-    }
-
-    textarea {
-      height: 150px;
-      font-size: 15px;
-    }
-
-    input,
-    textarea {
-      border: 2px solid $color-4th;
-      border-radius: 5px;
-      padding: 10px 7px;
-      margin-bottom: 7px;
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: none;
-      border-color: $color-1st;
-    }
-
-    button {
-      @extend .btn;
-      font-size: 15px;
-      margin-top: 10px;
-    }
-  }
-}
-
-.btn {
-  color: #484848;
-  padding: 5px 12px;
-  cursor: pointer;
-  border: 2px solid $color-4th;
-  border-radius: 7px;
-  transition: all 0.2s;
-  background-color: transparent;
-}
-
-.btn:hover {
-  color: $color-2nd;
-  border-color: $color-1st;
-  background-color: $color-1st;
-}
-
-.show {
-  animation-name: show;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
-
-.hide {
-  animation-name: hide;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
-
-@keyframes show {
-  0% {
-    opacity: 0;
-    left: -350px;
-    position: relative;
-    visibility: visible;
-  }
-  100% {
-    opacity: 1;
-    left: 0px;
-    position: relative;
-    visibility: visible;
-  }
-}
-
-@keyframes hide {
-  0% {
-    left: 0px;
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    left: 350px;
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-/* helpers */
-
-.flex {
-  display: flex;
-}
-
-.items-center {
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.mr-auto {
-  margin-right: auto;
+.single-entry-div {
+  max-width: 100%;
+
+  margin: 1em auto;
+  padding: 1em 1em;
 }
 
-.ml-auto {
-  margin-left: auto;
+.single-entry-date {
+  background-color: lightgoldenrodyellow;
+  width: 100%;
 }
 
-.mr-10 {
-  margin-right: 10px;
-}
-
-.ml-10 {
-  margin-left: 10px;
+.heading-results {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: lightgoldenrodyellow;
 }
