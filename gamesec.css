@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0); 
+}
+
+.sequence {
+    position: relative;
+    text-align: center;
+    font-family: 'Rocher';
+    font-size: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.proud {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    opacity: 1; /* Ensures the image is immediately visible */
+}
+
+.grays {
+    color: gray;
+    opacity: 1; /* Ensures the text is immediately visible */
+}
+
+#home {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+/* Remove visibility and opacity transitions */
+.homepage.show {
+    visibility: visible;
+    opacity: 1;
+    color: black;
+}
+
+#home-box {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: rgb(197, 212, 239);
+    margin-bottom: 100px;
+}
+
+#title-card {
+    margin: 0;
+    color: rgb(87, 136, 221);
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 50px;
+}
+
+.eat {
+    width: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px; /* Add space between cards */
+    margin-top: 20px; /* Add margin to the top */
+    flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+}
+
+#card1, #card2, #card3, #card4, #card5, #card6 {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 200px;
+    width: 300px; /* Adjust width for consistency */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(197, 212, 239);
+    display: flex;
+    flex-direction: column; /* Ensures content stacks vertically */
+    align-items: center; /* Center content inside the card */
+    justify-content: center;
+    text-align: center;
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column; /* Stacks vertically */
+}
+
+#card1:hover, 
+#card2:hover, 
+#card3:hover, 
+#card4:hover, 
+#card5:hover, 
+#card6:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+}
+
+.gamezone {
+    width: 150px;
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+#black {
+    color: rgb(178, 49, 154);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
