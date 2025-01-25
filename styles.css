@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0); /* Text initially invisible */
+}
+
+.sequence {
+    position: relative;
+    text-align: center;
+    animation: fadeOut 2s forwards 3s; /* Fade out after 3 seconds */
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.proud {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Image fades in */
+}
+
+.grays {
+    color: gray;
+    opacity: 0;
+    animation: fadeInText 1s forwards 1s; /* Text fades in after 2 seconds */
+}
+
+/* Homepage Styles */
+.homepage {
+    opacity: 0;
+    visibility: hidden; /* Initially hidden */
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    transition: opacity 1s ease-in-out, visibility 0s 1s;
+}
+
+#home {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black
+}
+
+/* Homepage visible styles when the show class is added */
+.homepage.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease-in-out, visibility 0s;
+}
