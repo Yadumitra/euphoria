@@ -65,6 +65,7 @@ h1 {
     font-family: 'Rocher';
     text-align: center;
     font-size: 50px;
+    margin-top:-200px;
 }
 
 .eat {
@@ -72,6 +73,7 @@ h1 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    margin-top:40px;
 }
 
 .card-container {
