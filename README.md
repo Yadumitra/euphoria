@@ -37,13 +37,13 @@ For Software:
 # Screenshots (Add at least 3)
 <img src="euphoria\img\opening_of_our_app.png">
 *Opening fade out animation of our website.*
-<img src="euphoria\img\homepage.png">
+<img src="img/homepage.png">
 *Home page*
-!<img src="euphoria\img\todoooo.png">
+!<img src="img/todoooo.png">
 *To-do list*
 !<img src="euphoria\img\personaljournal.png">
 *Diaryy/personal journal*
-!<img src="euphoria\img\breathingexercise.png">
+!<img src="img/breathing exercise.png">
 
 # Diagrams 
 ![Workflow](Add your workflow/architecture diagram here)
