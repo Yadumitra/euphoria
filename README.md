@@ -28,10 +28,6 @@ For Hardware:
 ### Implementation
 For Software:
 
-# Installation
-[commands]
-# Run
-[commands]
 ### Project Documentation
 For Software:
 # Screenshots (Add at least 3)
@@ -51,8 +47,8 @@ For Software:
 For Hardware:
 none
 # Build Photos
-![Team](Add photo of your team here)
-![Components]none
+!our team
+!none
 *List out all components shown*
 ![Build](Add photos of build process here)
 *Explain the build steps*
