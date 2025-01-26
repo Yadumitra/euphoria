@@ -31,7 +31,7 @@ For Software:
 ### Project Documentation
 For Software:
 # Screenshots (Add at least 3)
-<img src="euphoria\img\opening_of_our_app.png">
+<img src="img/opening_of_our_app.png">
 *Opening fade out animation of our website.*
 <img src="img/homepage.png">
 *Home page*
@@ -42,20 +42,18 @@ For Software:
 !<img src="img/breathing exercise.png">
 
 # Diagrams 
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+![Workflow]<img src="img/workflow diagram.png">
+The detailed explanation of our website.
 For Hardware:
 none
 # Build Photos
-!our team
-!none
-*List out all components shown*
-![Build](Add photos of build process here)
-*Explain the build steps*
-![Final](Add photo of final product here)
-*Explain the final build*
+!our team: <img src="img/us.jpg">
+!
+
 ### Project Demo
-# Video
+# <video controls>
+  <source src="img/our_app.mp4" type="video/mp4">
+ </video>
 [euphoria\img\our app.mp4]
 *The video demonstrates the whole website of ours from the home to each sections*
 # Additional Demos
